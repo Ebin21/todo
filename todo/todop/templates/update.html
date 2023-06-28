@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container-fluid">
+	<div class="row">
+			<div class="col-md-12">
+				<div class="banner">
+					<div class="banner-text">
+				<h1>TODO</h1>
+
+					</div>
+			</div>
+
+			</div>
+	</div>
+
+</div>
+<div class="row">
+	<div class="col-md-6" style="padding-left: 50px;">
+		<div class="shadow card" >
+				<div class="card-body">
+					<form action="" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.as_p}}
+  								<div ><input style="color:black" class="button about_button" type="submit" value="Update"></div>
+
+</form>
+					</div>
+			</div>
+
+		</div>
+
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+<div style="display: block; margin-left: auto ;margin-right: auto; width: 55%;">
+  <form method="POST">
+    {% csrf_token %}
+      <h3>Did you Finished this task?</h3>
+<div class="col-md-6" style="padding-right: 50px;">
+
+			<div class="shadow card" >
+				<div class="card-body">
+					<h5 class="card-title">{{task.name}}</h5>
+					<P><b>{{task.priority}}</b></P>
+					<P><b>{{task.date}}</b></P>
+
+				</div>
+
+			</div>
+	 <br>
+<input style="color:white" class="btn btn-danger" type="submit" value="Done">
+
+		</div>   <br><br>
+</form>
+</div>
+{% endblock %}

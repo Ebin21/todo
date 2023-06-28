@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container-fluid">
+	<div class="row">
+			<div class="col-md-12">
+				<div class="banner">
+					<div class="banner-text">
+				<h1>TODO</h1>
+
+					</div>
+			</div>
+
+			</div>
+	</div>
+
+</div>
+<div class="row">
+
+		<div class="col-md-6" style="padding-right: 50px;">
+			<h4>Task to complete</h4>
+			<div class="shadow card" >
+				<div class="card-body">
+					<h5 class="card-title">{{task.name}}</h5>
+					<P><b>{{task.priority}}</b></P>
+					<P><b>{{task.date}}</b></P>
+
+					<a href="{% url 'todo:delete' task.pk %}" class="btn btn-danger">Done</a>
+					<a href="{% url 'todo:update' task.pk %}" class="btn btn-success">Update</a> <br>
+
+				</div>
+			</div>
+			<br>
+
+
+		</div>
+
+</div>
+
+
+{% endblock %}
